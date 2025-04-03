@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+        }
+
+        body {
+            height: 150vh; /* Ensure enough height to scroll */
+            background-color: #f4f4f4;
+        }
+
+        /* Fixed Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            transition: background 0.3s, padding 0.3s;
+            z-index: 1000;
+        }
+
+        /* Navbar changes on scroll */
+        .navbar.scrolled {
+            background: #ff9800; /* Color changes when scrolled */
+            padding: 10px 20px;
+        }
+
+        /* Navbar links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+            padding: 5px 10px;
+        }
+
+        /* Hover Effect */
+        .nav-links a:hover {
+            background: #ff9800;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:black;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #333;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <h1 class="hero-text">Welcome to Our Website</h1>
+     <section class="hero">
+        hello
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@mybrand.com">info@mybrand.com</a></p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+    </section>
+
+    <script>
+        // Change navbar background on scroll
+        window.addEventListener("scroll", function () {
+            let navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>
